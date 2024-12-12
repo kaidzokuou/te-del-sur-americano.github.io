@@ -10,15 +10,22 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <style>
-        .banner {
+       .banner {
             background-image: url('../img/te verde.jpeg');
             background-size: cover;
             background-position: center;
-            height: 60vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
+            height: 40vh; /* Altura reducida */
+        }
+        .content-title {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-top: 30px;
+            text-align: center;
+        }
+        .content-description {
+            font-size: 1.5rem;
+            text-align: justify;
+            margin: 20px 0;
         }
         .card {
             height: 100%;
@@ -72,18 +79,21 @@
     </style>
 </head>
 <body>
-    <header class="banner">
-        <div>
-            <h1>Té Verde</h1>
-            <p>Beneficios antioxidantes y energizantes para una vida saludable.</p>
-        </div>
-    </header>
+  <header class="banner">
+    <!-- Comentado el texto del banner -->
+    <!-- <div class="banner-text">
+        <h1>Té Verde</h1>
+        <p>Beneficios antioxidantes y energizantes para una vida saludable.</p>
+    </div> -->
+</header>
 
-    <!-- Descripción -->
-    <section class="container py-5">
-        <h3>Té Verde</h3>
-        <p>El té verde es conocido por sus múltiples beneficios para la salud, incluyendo propiedades antioxidantes que ayudan a combatir los radicales libres. Es una excelente opción para mejorar la concentración y aumentar la energía de manera natural. Además, el té verde puede contribuir a la pérdida de peso y mejorar la salud cardiovascular. Su sabor fresco y delicado lo convierte en una bebida ideal para cualquier momento del día.</p>
-    </section>
+<!-- Descripción -->
+<section class="container py-5">
+    <h1 class="content-title">Té Verde</h1>
+    <p class="content-description">
+        El té verde es conocido por sus múltiples beneficios para la salud, incluyendo propiedades antioxidantes que ayudan a combatir los radicales libres. Es una excelente opción para mejorar la concentración y aumentar la energía de manera natural. Además, el té verde puede contribuir a la pérdida de peso y mejorar la salud cardiovascular. Su sabor fresco y delicado lo convierte en una bebida ideal para cualquier momento del día.
+    </p>
+</section>
 
     <!-- Variedades de Té Verde -->
     <section class="container py-5">
@@ -110,40 +120,56 @@
                                 <option value="500">500g</option>
                             </select>
                         </div>
-                        <button class="btn btn-primary w-100" onclick="addToCart('Té Verde Clásico', document.getElementById('gramos1').value, 12.00, document.getElementById('cantidad1').value)">Añadir al carrito</button>
+                        <div class="mb-2 d-flex justify-content-between">
+                          <button class="btn btn-primary me-2 flex-grow-1 d-flex align-items-center justify-content-center" onclick="addToCart('Té Verde Clásico', document.getElementById('gramos1').value, 12.00, document.getElementById('cantidad1').value)">
+                              <i class="bi bi-cart me-2"></i> Añadir
+                          </button>
+                          <button class="btn btn-secondary flex-grow-1" data-bs-toggle="modal" data-bs-target="#infoModal1">
+                              Más Información
+                          </button>
+                      </div>
+                      
+                      
                     </div>
                 </div>
             </div>
             <!-- Producto 2 -->
             <div class="col">
-                <div class="card">
-                    <img src="../img/te_verde/te_verde_matcha.png" class="card-img-top" alt="Té Verde Matcha">
-                    <div class="card-body">
-                        <h5 class="card-title">Té Verde Matcha</h5>
-                        <p class="card-text">Un té verde en polvo, ideal para postres.</p>
-                        <p><strong>Precio: $15.00</strong></p>
-                        <div class="mb-2">
-                            <label for="cantidad2">Cantidad:</label>
-                            <input type="number" id="cantidad2" class="form-control" min="1" value="1">
-                        </div>
-                        <div class="mb-2">
-                            <label for="gramos2">Gramos:</label>
-                            <select id="gramos2" class="form-select">
-                                <option value="20">20g</option>
-                                <option value="150">150g</option>
-                                <option value="250">250g</option>
-                                <option value="500">500g</option>
-                            </select>
-                        </div>
-                        <button class="btn btn-primary w-100" onclick="addToCart('Té Verde Matcha', document.getElementById('gramos2').value, 15.00, document.getElementById('cantidad2').value)">Añadir al carrito</button>
-                    </div>
-                </div>
-            </div>
+              <div class="card">
+                  <img src="../img/te_verde/te_verde_matcha.png" class="card-img-top" alt="Té Verde Matcha">
+                  <div class="card-body">
+                      <h5 class="card-title">Té Verde Matcha</h5>
+                      <p class="card-text">Un té verde en polvo, ideal para postres.</p>
+                      <p><strong>Precio: $15.00</strong></p>
+                      <div class="mb-2">
+                          <label for="cantidad2">Cantidad:</label>
+                          <input type="number" id="cantidad2" class="form-control" min="1" value="1">
+                      </div>
+                      <div class="mb-2">
+                          <label for="gramos2">Gramos:</label>
+                          <select id="gramos2" class="form-select">
+                              <option value="20">20g</option>
+                              <option value="150">150g</option>
+                              <option value="250">250g</option>
+                              <option value="500">500g</option>
+                          </select>
+                      </div>
+                      <div class="mb-2 d-flex justify-content-between">
+                          <button class="btn btn-primary me-2 flex-grow-1 d-flex align-items-center justify-content-center" onclick="addToCart('Té Verde Matcha', document.getElementById('gramos2').value, 15.00, document.getElementById('cantidad2').value)">
+                              <i class="bi bi-cart me-2"></i> Añadir
+                          </button>
+                          <button class="btn btn-secondary flex-grow-1" data-bs-toggle="modal" data-bs-target="#infoModal2">
+                              Más Información
+                          </button>
+                      </div>
+                  </div>
+              </div>
+          </div>
             <!-- Repite la estructura para los productos restantes -->
         </div>
-        <div class="text-center mt-4">
+        <!-- <div class="text-center mt-4">
             <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#quickViewModal">Ver Selección</button>
-        </div>
+        </div> -->
     </section>
 
     <!-- Modal Vista Rápida -->
@@ -262,5 +288,31 @@
             updateSummaryModal();
         }
     </script>
+        <!-- Modal para Más Información -->
+        <div class="modal fade" id="infoModal1" tabindex="-1" aria-labelledby="infoModalLabel1" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h5 class="modal-title" id="infoModalLabel1">Té Verde Clásico</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                      <p><strong>Descripción:</strong> Este té verde tradicional ofrece un sabor equilibrado que deleita a todos los amantes del té.</p>
+                      <p><strong>Beneficios:</strong></p>
+                      <ul>
+                          <li>Rico en antioxidantes que combaten los radicales libres.</li>
+                          <li>Mejora la concentración y promueve la energía natural.</li>
+                          <li>Contribuye a la pérdida de peso y mejora la salud cardiovascular.</li>
+                      </ul>
+                  </div>
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+  
+      <!-- Bootstrap JS -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
