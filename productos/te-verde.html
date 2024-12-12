@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Té Verde - Té del Sur Americano" />
+    <title>Té Verde - Té del Sur Americano</title>
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        .banner {
+            background-image: url('../img/te verde.jpeg');
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+        .card {
+            height: 100%;
+        }
+        .card-img-top {
+            height: 150px;
+            object-fit: cover;
+        }
+        .floating-buttons {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            gap: 10px;
+            z-index: 1000;
+        }
+        .floating-button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .floating-button i {
+            margin-right: 5px;
+        }
+        .floating-button:hover {
+            background-color: #0056b3;
+        }
+
+    /* NUEVOS PARA PRODUCTOS BOTONES */
+    .floating-button.volver {
+      background-color: #28a745; /* Verde */
+      color: #ffffff; /* Blanco */
+    }
+    .floating-button.volver:hover {
+      background-color: #218838; /* Verde más oscuro */
+    }
+
+    .floating-button.ver-carrito {
+      background-color: #fd7e14; /* Naranja */
+      color: #ffffff; /* Blanco */
+    }
+    .floating-button.ver-carrito:hover {
+      background-color: #e3620f; /* Naranja más oscuro */
+    }
+
+    </style>
+</head>
+<body>
+    <header class="banner">
+        <div>
+            <h1>Té Verde</h1>
+            <p>Beneficios antioxidantes y energizantes para una vida saludable.</p>
+        </div>
+    </header>
+
+    <!-- Descripción -->
+    <section class="container py-5">
+        <h3>Té Verde</h3>
+        <p>El té verde es conocido por sus múltiples beneficios para la salud, incluyendo propiedades antioxidantes que ayudan a combatir los radicales libres. Es una excelente opción para mejorar la concentración y aumentar la energía de manera natural. Además, el té verde puede contribuir a la pérdida de peso y mejorar la salud cardiovascular. Su sabor fresco y delicado lo convierte en una bebida ideal para cualquier momento del día.</p>
+    </section>
+
+    <!-- Variedades de Té Verde -->
+    <section class="container py-5">
+        <h3 class="text-center mb-4">Variedades de Té Verde</h3>
+        <div class="row row-cols-1 row-cols-md-4 g-4">
+            <!-- Producto 1 -->
+            <div class="col">
+                <div class="card">
+                    <img src="../img/te_verde/te_verde_clasico.png" class="card-img-top" alt="Té Verde Clásico">
+                    <div class="card-body">
+                        <h5 class="card-title">Té Verde Clásico</h5>
+                        <p class="card-text">Un té verde tradicional con sabor equilibrado.</p>
+                        <p><strong>Precio: $12.00</strong></p>
+                        <div class="mb-2">
+                            <label for="cantidad1">Cantidad:</label>
+                            <input type="number" id="cantidad1" class="form-control" min="1" value="1">
+                        </div>
+                        <div class="mb-2">
+                            <label for="gramos1">Gramos:</label>
+                            <select id="gramos1" class="form-select">
+                                <option value="20">20g</option>
+                                <option value="150">150g</option>
+                                <option value="250">250g</option>
+                                <option value="500">500g</option>
+                            </select>
+                        </div>
+                        <button class="btn btn-primary w-100" onclick="addToCart('Té Verde Clásico', document.getElementById('gramos1').value, 12.00, document.getElementById('cantidad1').value)">Añadir al carrito</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Producto 2 -->
+            <div class="col">
+                <div class="card">
+                    <img src="../img/te_verde/te_verde_matcha.png" class="card-img-top" alt="Té Verde Matcha">
+                    <div class="card-body">
+                        <h5 class="card-title">Té Verde Matcha</h5>
+                        <p class="card-text">Un té verde en polvo, ideal para postres.</p>
+                        <p><strong>Precio: $15.00</strong></p>
+                        <div class="mb-2">
+                            <label for="cantidad2">Cantidad:</label>
+                            <input type="number" id="cantidad2" class="form-control" min="1" value="1">
+                        </div>
+                        <div class="mb-2">
+                            <label for="gramos2">Gramos:</label>
+                            <select id="gramos2" class="form-select">
+                                <option value="20">20g</option>
+                                <option value="150">150g</option>
+                                <option value="250">250g</option>
+                                <option value="500">500g</option>
+                            </select>
+                        </div>
+                        <button class="btn btn-primary w-100" onclick="addToCart('Té Verde Matcha', document.getElementById('gramos2').value, 15.00, document.getElementById('cantidad2').value)">Añadir al carrito</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Repite la estructura para los productos restantes -->
+        </div>
+        <div class="text-center mt-4">
+            <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#quickViewModal">Ver Selección</button>
+        </div>
+    </section>
+
+    <!-- Modal Vista Rápida -->
+    <div class="modal fade" id="quickViewModal" tabindex="-1" aria-labelledby="quickViewModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="quickViewModalLabel">Productos Seleccionados Actuales</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <ul class="list-group" id="cartItems">
+                        <!-- Los productos seleccionados se agregarán aquí dinámicamente -->
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Resumen General -->
+    <div class="modal fade" id="cartSummaryModal" tabindex="-1" aria-labelledby="cartSummaryModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cartSummaryModalLabel">Resumen de Productos Seleccionados</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Producto</th>
+                                <th>Tipo</th>
+                                <th>Cantidad</th>
+                                <th>Gramos</th>
+                                <th>Precio</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="summaryItems">
+                            <!-- Los productos seleccionados se agregarán aquí dinámicamente -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Proceder con la Compra</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+      <div class="floating-buttons">
+        <button class="floating-button volver" onclick="window.location.href='../index.html'">
+            <i class="bi bi-house"></i> Volver
+        </button>
+        <button class="floating-button ver-carrito" data-bs-toggle="modal" data-bs-target="#cartSummaryModal">
+            <i class="bi bi-cart"></i> Ver Carrito
+        </button>
+    </div>
+  
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        let cart = [];
+
+        function addToCart(name, grams, price, quantity) {
+            cart.push({ name, grams, price, quantity, type: "Té Verde" });
+            updateCartModal();
+            updateSummaryModal();
+        }
+
+        function updateCartModal() {
+            const cartItems = document.getElementById('cartItems');
+            cartItems.innerHTML = '';
+            cart.forEach((item, index) => {
+                const listItem = document.createElement('li');
+                listItem.classList.add('list-group-item', 'd-flex', 'justify-content-between', 'align-items-center');
+                listItem.innerHTML = `${item.name} - ${item.grams}g - $${item.price.toFixed(2)} x ${item.quantity}`;
+                const removeButton = document.createElement('button');
+                removeButton.classList.add('btn', 'btn-danger', 'btn-sm');
+                removeButton.textContent = 'Eliminar';
+                removeButton.onclick = () => {
+                    cart.splice(index, 1);
+                    updateCartModal();
+                    updateSummaryModal();
+                };
+                listItem.appendChild(removeButton);
+                cartItems.appendChild(listItem);
+            });
+        }
+
+        function updateSummaryModal() {
+            const summaryItems = document.getElementById('summaryItems');
+            summaryItems.innerHTML = '';
+            cart.forEach((item, index) => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${item.name}</td>
+                    <td>${item.type}</td>
+                    <td>${item.quantity}</td>
+                    <td>${item.grams}g</td>
+                    <td>$${item.price.toFixed(2)}</td>
+                    <td><button class="btn btn-danger btn-sm" onclick="removeFromCart(${index})">Eliminar</button></td>
+                `;
+                summaryItems.appendChild(row);
+            });
+        }
+
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            updateCartModal();
+            updateSummaryModal();
+        }
+    </script>
+</body>
+</html>
