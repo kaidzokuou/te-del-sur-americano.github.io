@@ -63,163 +63,173 @@
         </div>
     </header>
 
-    <!-- Nosotros Section -->
-    <section id="about" class="py-5">
-        <div class="container">
-            <h2 class="text-center">Nosotros</h2>
-            <div class="lead text-left">
-                <h2>Té del Sur Americano</h2>
-                <p>En Té del Sur Americano ofrecemos tés de la más alta calidad provenientes de las
-                    mejores regiones productoras de América del Sur, combinados con una experiencia de compra
-                    personalizada gracias a la inteligencia artificial.</p>
-                <h3>Propuesta de Valor</h3>
-                <p>Té del Sur Americano no solo ofrece tés de la más alta calidad provenientes de las mejores
-                    regiones productoras de América del Sur, sino que también pone a disposición una experiencia de
-                    compra personalizada gracias al uso de inteligencia artificial. Nuestra propuesta de valor está
-                    fundamentada en la calidad premium de nuestros productos y en la innovación tecnológica que
-                    mejora la experiencia de nuestros clientes, ofreciendo recomendaciones personalizadas,
-                    optimizando los precios y gestionando eficientemente las preferencias de los usuarios.</p>
 
-                <h3>Misión</h3>
-                <p>La misión de Té del Sur Americano es ofrecer a los amantes del té en Chile una plataforma online
-                    confiable y accesible, que no solo les proporcione tés de alta calidad, sino que también
-                    optimice su experiencia de compra mediante el uso de tecnologías inteligentes como la
-                    inteligencia artificial.</p>
-
-                <h3>Visión</h3>
-                <p>Nuestra visión es convertirnos en la tienda online líder en venta de té premium en Chile,
-                    destacándonos no solo por la calidad de nuestros productos, sino también por nuestra capacidad
-                    de innovación mediante el uso de la inteligencia artificial.</p>
-                </div>
-        </div>
-    </section>
-
-    <!-- Productos Section -->
-    <section id="services" class="bg-light py-5">
-        <div class="container">
-            <h2 class="text-center mb-4">Servicios que ofrecemos</h2>
-            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-                <!-- Card 1 -->
-                <div class="col">
-                    <div class="card h-100 text-center">
-                        <img src="img/te verde.jpeg" class="card-img-top" alt="Té Verde">
-                        <div class="card-body">
-                            <h5 class="card-title">Té Verde</h5>
-                            <p class="card-text">Disfruta de los beneficios antioxidantes y energizantes del té verde, ideal
-                                para una vida saludable.</p>
-                            <a href="productos/te-verde.html" class="btn btn-primary">Ver Productos</a>
-                            <!-- <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#quickViewModal">Vista Rápida</button> -->
-                        </div>
-                    </div>
-                </div>
-                <!-- Card 2 -->
-                <div class="col">
-                    <div class="card h-100 text-center">
-                        <img src="img/Te de manzanilla.jpeg" class="card-img-top" alt="Té de Manzanilla">
-                        <div class="card-body">
-                            <h5 class="card-title">Té de Manzanilla</h5>
-                            <p class="card-text">Relájate con el té de manzanilla, perfecto para reducir el estrés.</p>
-                            <a href="#" class="btn btn-primary">Ver Productos</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card 3 -->
-                <div class="col">
-                    <div class="card h-100 text-center">
-                        <img src="img/Te de jengibre.jpeg" class="card-img-top" alt="Té de Jengibre">
-                        <div class="card-body">
-                            <h5 class="card-title">Té de Jengibre</h5>
-                            <p class="card-text">Aprovecha las propiedades antiinflamatorias del jengibre.</p>
-                            <a href="#" class="btn btn-primary">Ver Productos</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contacto Section -->
-    <!-- <section id="contact" class="py-5">
-        <div class="container">
-            <h2 class="text-center">Contáctanos</h2>
-            <form>
-                <div class="mb-3">
-                    <label for="name" class="form-label">Nombre</label>
-                    <input type="text" id="name" class="form-control">
-                </div>
-                <div class="mb-3">
-                    <label for="email" class="form-label">Email</label>
-                    <input type="email" id="email" class="form-control">
-                </div>
-                <div class="mb-3">
-                    <label for="message" class="form-label">Mensaje</label>
-                    <textarea id="message" class="form-control"></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Enviar</button>
-            </form>
-        </div>
-    </section> -->
-    <section id="contact" class="py-5">
-        <div class="container">
-                    <h2>Contáctanos</h2>
-                    <p class="lead">Si tienes alguna consulta sobre nuestros productos, pedidos o cualquier otro tema,
-                        por favor, envíanos tu consulta a través de este formulario. Estaremos encantados de ayudarte.
-                    </p>
-
-                    <form action="#" method="post">
-                        <div class="mb-3">
-                            <label for="name" class="form-label">Nombre</label>
-                            <input type="text" class="form-control" id="name" required />
-                        </div>
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Correo Electrónico</label>
-                            <input type="email" class="form-control" id="email" required />
-                        </div>
-                        <div class="mb-3">
-                            <label for="message" class="form-label">Mensaje</label>
-                            <textarea class="form-control" id="message" rows="4" required></textarea>
-                        </div>
-                        <!-- Botón "Enviar Consulta" -->
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                            data-bs-target="#confirmationModal" onclick="handleFormSubmission()">Enviar
-                            Consulta</button>
-
-                        <!-- Modal de Confirmación -->
-                        <div class="modal fade" id="confirmationModal" tabindex="-1"
-                            aria-labelledby="confirmationModalLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="confirmationModalLabel">¡Mensaje Enviado!</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                            aria-label="Close"></button>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <section id="about" class="py-5">
+                    <div class="container">
+                        <h2 class="text-center mb-4">Nosotros</h2>
+                        <div class="row justify-content-center">
+                            <div class="col-lg-10">
+                                <div class="text-center mb-4">
+                                    <p class="lead">En Té del Sur Americano ofrecemos tés de la más alta calidad provenientes de las mejores regiones productoras de América del Sur, combinados con una experiencia de compra personalizada gracias a la inteligencia artificial.</p>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <h3 class="text-success">Propuesta de Valor</h3>
+                                        <p>Nuestra propuesta de valor está fundamentada en la calidad premium de nuestros productos y en la innovación tecnológica que mejora la experiencia de nuestros clientes, ofreciendo recomendaciones personalizadas, optimizando los precios y gestionando eficientemente las preferencias de los usuarios.</p>
                                     </div>
-                                    <div class="modal-body text-center">
-                                        <i class="bi bi-envelope-check text-success" style="font-size: 3rem;"></i>
-                                        <p class="mt-3">Gracias por tu mensaje. Lo revisaremos y te contactaremos a la
-                                            brevedad.</p>
-                                        <div id="submittedData" class="text-start mt-4"></div>
+                                    <div class="col-md-6">
+                                        <h3 class="text-success">Misión</h3>
+                                        <p>La misión de Té del Sur Americano es ofrecer a los amantes del té en Chile una plataforma online confiable y accesible, que no solo les proporcione tés de alta calidad, sino que también optimice su experiencia de compra mediante el uso de tecnologías inteligentes como la inteligencia artificial.</p>
                                     </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary"
-                                            data-bs-dismiss="modal">Cerrar</button>
+                                </div>
+                                <div class="row mt-4">
+                                    <div class="col text-center">
+                                        <h3 class="text-success">Visión</h3>
+                                        <p>Nuestra visión es convertirnos en la tienda online líder en venta de té premium en Chile, destacándonos no solo por la calidad de nuestros productos, sino también por nuestra capacidad de innovación mediante el uso de la inteligencia artificial.</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </form>
-                    <br>
-                    <h3>Ubicación</h3>
-                    <p>Visítanos en nuestra dirección o consulta el mapa para más detalles.</p>
-                    <!-- Mapa de Google Embebido -->
-                    <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item"
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13299.169815273738!2d-70.6617855!3d-33.4436096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c5a9420f9f75%3A0x8c1f0a5b93397676!2sAlmte.%20Barroso%2076%2C%202800000%20Santiago%2C%20Regi%C3%B3n%20Metropolitana!5e0!3m2!1ses!2scl!4v1630842711805!5m2!1ses!2scl"
-                            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy">
-                        </iframe>
                     </div>
+                </section>
+                
+                
+                    <!-- Productos Section -->
+                    <section id="services" class="bg-light py-5">
+                        <div class="container">
+                            <h2 class="text-center mb-4">Servicios que ofrecemos</h2>
+                            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                                <!-- Card 1 -->
+                                <div class="col">
+                                    <div class="card h-100 text-center">
+                                        <img src="img/te verde.jpeg" class="card-img-top" alt="Té Verde">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Té Verde</h5>
+                                            <p class="card-text">Disfruta de los beneficios antioxidantes y energizantes del té verde, ideal
+                                                para una vida saludable.</p>
+                                            <a href="productos/te-verde.html" class="btn btn-primary">Ver Productos</a>
+                                            <!-- <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#quickViewModal">Vista Rápida</button> -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Card 2 -->
+                                <div class="col">
+                                    <div class="card h-100 text-center">
+                                        <img src="img/Te de manzanilla.jpeg" class="card-img-top" alt="Té de Manzanilla">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Té de Manzanilla</h5>
+                                            <p class="card-text">Relájate con el té de manzanilla, perfecto para reducir el estrés.</p>
+                                            <a href="#" class="btn btn-primary">Ver Productos</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Card 3 -->
+                                <div class="col">
+                                    <div class="card h-100 text-center">
+                                        <img src="img/Te de jengibre.jpeg" class="card-img-top" alt="Té de Jengibre">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Té de Jengibre</h5>
+                                            <p class="card-text">Aprovecha las propiedades antiinflamatorias del jengibre.</p>
+                                            <a href="#" class="btn btn-primary">Ver Productos</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                
+                    <!-- Contacto Section -->
+                    <!-- <section id="contact" class="py-5">
+                        <div class="container">
+                            <h2 class="text-center">Contáctanos</h2>
+                            <form>
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">Nombre</label>
+                                    <input type="text" id="name" class="form-control">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" id="email" class="form-control">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="message" class="form-label">Mensaje</label>
+                                    <textarea id="message" class="form-control"></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Enviar</button>
+                            </form>
+                        </div>
+                    </section> -->
+                    <section id="contact" class="py-5">
+                        <div class="container">
+                                    <h2>Contáctanos</h2>
+                                    <p class="lead">Si tienes alguna consulta sobre nuestros productos, pedidos o cualquier otro tema,
+                                        por favor, envíanos tu consulta a través de este formulario. Estaremos encantados de ayudarte.
+                                    </p>
+                
+                                    <form action="#" method="post">
+                                        <div class="mb-3">
+                                            <label for="name" class="form-label">Nombre</label>
+                                            <input type="text" class="form-control" id="name" required />
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="email" class="form-label">Correo Electrónico</label>
+                                            <input type="email" class="form-control" id="email" required />
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="message" class="form-label">Mensaje</label>
+                                            <textarea class="form-control" id="message" rows="4" required></textarea>
+                                        </div>
+                                        <!-- Botón "Enviar Consulta" -->
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                            data-bs-target="#confirmationModal" onclick="handleFormSubmission()">Enviar
+                                            Consulta</button>
+                
+                                        <!-- Modal de Confirmación -->
+                                        <div class="modal fade" id="confirmationModal" tabindex="-1"
+                                            aria-labelledby="confirmationModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="confirmationModalLabel">¡Mensaje Enviado!</h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                            aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body text-center">
+                                                        <i class="bi bi-envelope-check text-success" style="font-size: 3rem;"></i>
+                                                        <p class="mt-3">Gracias por tu mensaje. Lo revisaremos y te contactaremos a la
+                                                            brevedad.</p>
+                                                        <div id="submittedData" class="text-start mt-4"></div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary"
+                                                            data-bs-dismiss="modal">Cerrar</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <br>
+                                    <h3>Ubicación</h3>
+                                    <p>Visítanos en nuestra dirección o consulta el mapa para más detalles.</p>
+                                    <!-- Mapa de Google Embebido -->
+                                    <div class="embed-responsive embed-responsive-16by9">
+                                        <iframe class="embed-responsive-item"
+                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13299.169815273738!2d-70.6617855!3d-33.4436096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c5a9420f9f75%3A0x8c1f0a5b93397676!2sAlmte.%20Barroso%2076%2C%202800000%20Santiago%2C%20Regi%C3%B3n%20Metropolitana!5e0!3m2!1ses!2scl!4v1630842711805!5m2!1ses!2scl"
+                                            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+                                        </iframe>
+                                    </div>
+                        </div>
+                    </section>
+            </div>
         </div>
-    </section>
+    </div>
+
+    <!-- Nosotros Section -->
+<!-- Nosotros Section Mejorado -->
+
 
     <!-- Footer -->
     <footer class="bg-dark text-white py-3">
